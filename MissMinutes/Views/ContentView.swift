@@ -2,7 +2,8 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        TimezonesView()
+            .padding()
             .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }

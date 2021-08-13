@@ -10,7 +10,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let contentView = ContentView()
 
         popover.contentViewController = MainViewController()
-        self.popover.contentSize = NSSize(width: 360, height: 360)
+        self.popover.contentSize = NSSize(width: 460, height: 160)
         self.popover.contentViewController?.view = NSHostingView(rootView: contentView)
 
         self.statusBar = StatusBarController(self.popover)

@@ -19,6 +19,7 @@
 		8A4877C726C6A9D500673989 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4877C626C6A9D500673989 /* Location.swift */; };
 		8A4877C926C6A9E200673989 /* Location+DateHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4877C826C6A9E200673989 /* Location+DateHandling.swift */; };
 		8A4877CB26C6AAD300673989 /* DateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4877CA26C6AAD300673989 /* DateFormat.swift */; };
+		8A4877D026C6AC5E00673989 /* TimezonesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4877CF26C6AC5E00673989 /* TimezonesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		8A4877C626C6A9D500673989 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		8A4877C826C6A9E200673989 /* Location+DateHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+DateHandling.swift"; sourceTree = "<group>"; };
 		8A4877CA26C6AAD300673989 /* DateFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormat.swift; sourceTree = "<group>"; };
+		8A4877CF26C6AC5E00673989 /* TimezonesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimezonesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,10 +71,10 @@
 		8A4877A726C69E7E00673989 /* MissMinutes */ = {
 			isa = PBXGroup;
 			children = (
+				8A4877CE26C6AC4300673989 /* Views */,
 				8A4877C526C6A9BB00673989 /* Model */,
 				8A4877BB26C6A23300673989 /* Menubar */,
 				8A4877A826C69E7E00673989 /* AppDelegate.swift */,
-				8A4877AA26C69E7E00673989 /* ContentView.swift */,
 				8A4877AC26C69E8200673989 /* Assets.xcassets */,
 				8A4877B126C69E8200673989 /* Main.storyboard */,
 				8A4877B426C69E8200673989 /* Info.plist */,
@@ -108,6 +110,15 @@
 				8A4877CA26C6AAD300673989 /* DateFormat.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		8A4877CE26C6AC4300673989 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8A4877AA26C69E7E00673989 /* ContentView.swift */,
+				8A4877CF26C6AC5E00673989 /* TimezonesView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,6 +202,7 @@
 				8A4877CB26C6AAD300673989 /* DateFormat.swift in Sources */,
 				8A4877A926C69E7E00673989 /* AppDelegate.swift in Sources */,
 				8A4877C026C6A27000673989 /* EventMonitor.swift in Sources */,
+				8A4877D026C6AC5E00673989 /* TimezonesView.swift in Sources */,
 				8A4877C726C6A9D500673989 /* Location.swift in Sources */,
 				8A4877C126C6A27000673989 /* MainViewController.swift in Sources */,
 				8A4877C926C6A9E200673989 /* Location+DateHandling.swift in Sources */,
