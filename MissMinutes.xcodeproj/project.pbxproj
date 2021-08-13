@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,10 @@
 		8A4877BF26C6A27000673989 /* StatusBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4877BC26C6A27000673989 /* StatusBarController.swift */; };
 		8A4877C026C6A27000673989 /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4877BD26C6A27000673989 /* EventMonitor.swift */; };
 		8A4877C126C6A27000673989 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4877BE26C6A27000673989 /* MainViewController.swift */; };
+		8A4877C426C6A9A300673989 /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = 8A4877C326C6A9A300673989 /* SwiftDate */; };
+		8A4877C726C6A9D500673989 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4877C626C6A9D500673989 /* Location.swift */; };
+		8A4877C926C6A9E200673989 /* Location+DateHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4877C826C6A9E200673989 /* Location+DateHandling.swift */; };
+		8A4877CB26C6AAD300673989 /* DateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4877CA26C6AAD300673989 /* DateFormat.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +33,9 @@
 		8A4877BC26C6A27000673989 /* StatusBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusBarController.swift; sourceTree = "<group>"; };
 		8A4877BD26C6A27000673989 /* EventMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
 		8A4877BE26C6A27000673989 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		8A4877C626C6A9D500673989 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		8A4877C826C6A9E200673989 /* Location+DateHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+DateHandling.swift"; sourceTree = "<group>"; };
+		8A4877CA26C6AAD300673989 /* DateFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormat.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A4877C426C6A9A300673989 /* SwiftDate in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +69,7 @@
 		8A4877A726C69E7E00673989 /* MissMinutes */ = {
 			isa = PBXGroup;
 			children = (
+				8A4877C526C6A9BB00673989 /* Model */,
 				8A4877BB26C6A23300673989 /* Menubar */,
 				8A4877A826C69E7E00673989 /* AppDelegate.swift */,
 				8A4877AA26C69E7E00673989 /* ContentView.swift */,
@@ -91,6 +100,16 @@
 			path = Menubar;
 			sourceTree = "<group>";
 		};
+		8A4877C526C6A9BB00673989 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8A4877C626C6A9D500673989 /* Location.swift */,
+				8A4877C826C6A9E200673989 /* Location+DateHandling.swift */,
+				8A4877CA26C6AAD300673989 /* DateFormat.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -107,6 +126,9 @@
 			dependencies = (
 			);
 			name = MissMinutes;
+			packageProductDependencies = (
+				8A4877C326C6A9A300673989 /* SwiftDate */,
+			);
 			productName = MissMinutes;
 			productReference = 8A4877A526C69E7E00673989 /* MissMinutes.app */;
 			productType = "com.apple.product-type.application";
@@ -134,6 +156,9 @@
 				Base,
 			);
 			mainGroup = 8A48779C26C69E7E00673989;
+			packageReferences = (
+				8A4877C226C6A9A300673989 /* XCRemoteSwiftPackageReference "SwiftDate" */,
+			);
 			productRefGroup = 8A4877A626C69E7E00673989 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -163,9 +188,12 @@
 			files = (
 				8A4877AB26C69E7E00673989 /* ContentView.swift in Sources */,
 				8A4877BF26C6A27000673989 /* StatusBarController.swift in Sources */,
+				8A4877CB26C6AAD300673989 /* DateFormat.swift in Sources */,
 				8A4877A926C69E7E00673989 /* AppDelegate.swift in Sources */,
 				8A4877C026C6A27000673989 /* EventMonitor.swift in Sources */,
+				8A4877C726C6A9D500673989 /* Location.swift in Sources */,
 				8A4877C126C6A27000673989 /* MainViewController.swift in Sources */,
+				8A4877C926C6A9E200673989 /* Location+DateHandling.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,6 +392,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8A4877C226C6A9A300673989 /* XCRemoteSwiftPackageReference "SwiftDate" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/malcommac/SwiftDate";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.3.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8A4877C326C6A9A300673989 /* SwiftDate */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8A4877C226C6A9A300673989 /* XCRemoteSwiftPackageReference "SwiftDate" */;
+			productName = SwiftDate;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8A48779D26C69E7E00673989 /* Project object */;
 }
