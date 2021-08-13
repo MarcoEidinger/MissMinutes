@@ -17,4 +17,16 @@
 
 ***
 
-WIP :)
+My personal **Miss Minutes**, a small but fine macOS menu bar app, to show current time and provide time forecasting capabilities for
+- San Francisco
+- Berlin
+- Bangalore
+- Shanghai
+
+> FOR ALL TIME. ALWAYS.
+
+<img width="780" alt="MissMinutesPreview" src="https://user-images.githubusercontent.com/4176826/129386313-528f0eaf-8a02-4261-916b-18c237450ba4.png">
+
+Brought to you by the Time Variance Authority ❤️
+
+Fair use of *Miss Minutes* ©️ by Marvel/Disney 
