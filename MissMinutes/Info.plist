@@ -26,5 +26,9 @@
 	<string>Main</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+    <key>LSUIElement</key>
+    <true/>
+    <key>NSHumanReadableCopyright</key>
+    <string>Copyright © 2021 Marco Eidinger. All rights reserved.</string>
 </dict>
 </plist>
