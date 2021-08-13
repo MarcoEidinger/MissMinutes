@@ -6,22 +6,22 @@ class EventMonitor {
     private let handler: (NSEvent?) -> Void
 
     public init(mask: NSEvent.EventTypeMask, handler: @escaping (NSEvent?) -> Void) {
-      self.mask = mask
-      self.handler = handler
+        self.mask = mask
+        self.handler = handler
     }
 
     deinit {
-      stop()
+        stop()
     }
 
     public func start() {
-        monitor = NSEvent.addGlobalMonitorForEvents(matching: mask, handler: handler) as! NSObject
+        self.monitor = NSEvent.addGlobalMonitorForEvents(matching: self.mask, handler: self.handler) as! NSObject
     }
 
     public func stop() {
-      if monitor != nil {
-        NSEvent.removeMonitor(monitor!)
-        monitor = nil
-      }
+        if self.monitor != nil {
+            NSEvent.removeMonitor(self.monitor!)
+            self.monitor = nil
+        }
     }
 }

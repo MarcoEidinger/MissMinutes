@@ -6,11 +6,10 @@ class StatusBarController {
     private var popover: NSPopover
     private var eventMonitor: EventMonitor?
 
-    init(_ popover: NSPopover)
-    {
+    init(_ popover: NSPopover) {
         self.popover = popover
-        statusBar = NSStatusBar.init()
-        statusItem = statusBar.statusItem(withLength: 28.0)
+        self.statusBar = NSStatusBar()
+        self.statusItem = self.statusBar.statusItem(withLength: 28.0)
 
         if let statusBarButton = statusItem.button {
             if #available(macOS 11.0, *) {
@@ -21,37 +20,36 @@ class StatusBarController {
             statusBarButton.image?.size = NSSize(width: 18.0, height: 18.0)
             statusBarButton.image?.isTemplate = true
 
-            statusBarButton.action = #selector(togglePopover(sender:))
+            statusBarButton.action = #selector(self.togglePopover(sender:))
             statusBarButton.target = self
         }
 
-        eventMonitor = EventMonitor(mask: [.leftMouseDown, .rightMouseDown], handler: mouseEventHandler)
+        self.eventMonitor = EventMonitor(mask: [.leftMouseDown, .rightMouseDown], handler: self.mouseEventHandler)
     }
 
     @objc func togglePopover(sender: AnyObject) {
-        if(popover.isShown) {
-            hidePopover(sender)
-        }
-        else {
-            showPopover(sender)
+        if self.popover.isShown {
+            self.hidePopover(sender)
+        } else {
+            self.showPopover(sender)
         }
     }
 
     func showPopover(_ sender: AnyObject) {
         if let statusBarButton = statusItem.button {
-            popover.show(relativeTo: statusBarButton.bounds, of: statusBarButton, preferredEdge: NSRectEdge.maxY)
-            eventMonitor?.start()
+            self.popover.show(relativeTo: statusBarButton.bounds, of: statusBarButton, preferredEdge: NSRectEdge.maxY)
+            self.eventMonitor?.start()
         }
     }
 
     func hidePopover(_ sender: AnyObject) {
-        popover.performClose(sender)
-        eventMonitor?.stop()
+        self.popover.performClose(sender)
+        self.eventMonitor?.stop()
     }
 
     func mouseEventHandler(_ event: NSEvent?) {
-        if(popover.isShown) {
-            hidePopover(event!)
+        if self.popover.isShown {
+            self.hidePopover(event!)
         }
     }
 }
